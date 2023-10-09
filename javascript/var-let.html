@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var/let</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function log(x) {
+            document.write("<p>" + x + "</p>");
+        }
+
+        {
+            const ca = "常量";  // 局部变量，只在{ }有效
+            let la = "hello";   // 局部变量，只在{ }有效
+            var va = 100;       // 全局变量，在整个代码空间有效
+           
+            // ca += 123;       // 常量不允许修改
+            va += 10;           // va = va + 10 = 110
+            la += 123;          // la = la + 123 = "hello123"
+
+            log(ca);
+            log(la);
+        }
+
+        log(va);
+
+        let u;  // 未定义 undefined
+
+        // u = 123456; // defined 赋值
+
+        // u = null;
+
+        u += 100;
+
+        console.log(u);
+    
+    </script>
+</body>
+</html>
